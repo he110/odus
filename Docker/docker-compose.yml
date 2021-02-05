@@ -3,7 +3,7 @@ version: '3'
 services:
   database:
     build:
-      context: ./database
+      context: database
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${DATABASE_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${DATABASE_PASSWORD}
@@ -16,7 +16,7 @@ services:
 
   php-fpm:
     build:
-      context: ./php-fpm
+      context: php-fpm
     depends_on:
       - database
     environment:
@@ -28,7 +28,7 @@ services:
 
   nginx:
     build:
-      context: ./nginx
+      context: nginx
     volumes:
       - ../src:/var/www
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
