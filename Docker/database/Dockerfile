@@ -1,4 +1,3 @@
-FROM mongo
-CMD ["mongod"]
-EXPOSE 27017
-EXPOSE 28017
+FROM mariadb:latest
+CMD ["mysqld"]
+EXPOSE 3306
