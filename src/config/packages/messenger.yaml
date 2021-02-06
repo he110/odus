@@ -10,4 +10,4 @@ framework:
             # sync: 'sync://'
 
         routing:
-            # 'App\Message\YourMessage': async
+            App\Message\TelegramMessage: async            # 'App\Message\YourMessage': async
