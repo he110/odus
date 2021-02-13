@@ -16,11 +16,24 @@ services:
       - ./database/data:/data
     restart: always
 
+  mongodb:
+    build:
+      context: mongodb
+#    environment:
+#      - MONGO_INITDB_ROOT_USERNAME=root
+#      - MONGO_INITDB_ROOT_PASSWORD=
+    ports:
+      - "27017:27017"
+      - "28017:28017"
+    volumes:
+      - ./mongodb/data:/data
+
   php-fpm:
     build:
       context: php-fpm
     depends_on:
       - database
+      - mongodb
       - redis
     environment:
       - APP_ENV=${APP_ENV}

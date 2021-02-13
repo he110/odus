@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y \
         && apt-get install -y libpq-dev \
         && pecl install mcrypt-1.0.3 \
         && pecl install -o -f redis \
+        && pecl install mongodb \
+        && docker-php-ext-enable mongodb \
         && docker-php-ext-enable mcrypt \
         && docker-php-ext-install pdo_mysql \
         && docker-php-ext-enable redis

@@ -10,6 +10,7 @@
         "composer/package-versions-deprecated": "1.11.99.1",
         "doctrine/doctrine-bundle": "^2.2",
         "doctrine/doctrine-migrations-bundle": "^3.0",
+        "doctrine/mongodb-odm-bundle": "^4.3",
         "doctrine/orm": "^2.8",
         "irazasyed/telegram-bot-sdk": "^3.4",
         "predis/predis": "^1.1",
